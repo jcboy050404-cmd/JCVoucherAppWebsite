@@ -10,6 +10,10 @@
     --font-main: 'Poppins', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -45,9 +49,9 @@ body {
 .blob {
     position: absolute;
     border-radius: 50%;
-    filter: blur(100px);
-    opacity: 0.5;
+    opacity: 0.6;
     animation: float 20s infinite ease-in-out alternate;
+    will-change: transform;
 }
 
 .blob-1 {
@@ -615,6 +619,17 @@ footer {
     .mockup-center {
         max-width: 260px;
         transform: scale(1);
+    }
+
+    /* Mobile Performance Optimizations */
+    .feature-card, .cta-card {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        background: rgba(18, 21, 30, 0.95) !important;
+    }
+    
+    .blob {
+        animation: none;
     }
 
     .features {
