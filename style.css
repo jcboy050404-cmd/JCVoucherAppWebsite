@@ -4,8 +4,9 @@
     --text-muted: #8E9BAE;
     --primary-color: #00D2FF;
     --secondary-color: #34A853;
-    --glass-bg: #12151E;
-    --glass-border: #1F2433;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
     --font-main: 'Poppins', sans-serif;
 }
 
@@ -78,7 +79,9 @@ header {
     width: 100%;
     top: 0;
     z-index: 100;
-    backdrop-filter: blur(10px);
+    background: rgba(9, 11, 16, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--glass-border);
     transition: background 0.3s ease, box-shadow 0.3s ease;
 }
@@ -232,7 +235,8 @@ header {
     border-radius: 50px;
     font-size: 0.9rem;
     margin-bottom: 1.5rem;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .hero-title {
@@ -288,7 +292,9 @@ header {
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     border-radius: 24px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--glass-shadow);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
 }
 
 .hero-image-wrapper {
@@ -377,28 +383,34 @@ header {
     padding: 3rem 2rem;
     text-align: left;
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: var(--glass-shadow);
 }
 
 .feature-card:nth-child(odd) {
-    border-color: rgba(0, 210, 255, 0.4);
-    background: linear-gradient(145deg, rgba(18, 21, 30, 1), rgba(0, 210, 255, 0.05));
+    border-color: rgba(0, 210, 255, 0.2);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(0, 210, 255, 0.08));
 }
 
 .feature-card:nth-child(odd):hover {
     transform: translateY(-10px);
-    border-color: rgba(0, 210, 255, 0.8);
-    box-shadow: 0 10px 30px rgba(0, 210, 255, 0.15);
+    border-color: rgba(0, 210, 255, 0.6);
+    box-shadow: 0 10px 30px rgba(0, 210, 255, 0.2);
 }
 
 .feature-card:nth-child(even) {
-    border-color: rgba(52, 168, 83, 0.4);
-    background: linear-gradient(145deg, rgba(18, 21, 30, 1), rgba(52, 168, 83, 0.05));
+    border-color: rgba(52, 168, 83, 0.2);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(52, 168, 83, 0.08));
 }
 
 .feature-card:nth-child(even):hover {
     transform: translateY(-10px);
-    border-color: rgba(52, 168, 83, 0.8);
-    box-shadow: 0 10px 30px rgba(52, 168, 83, 0.15);
+    border-color: rgba(52, 168, 83, 0.6);
+    box-shadow: 0 10px 30px rgba(52, 168, 83, 0.2);
 }
 
 .feature-icon {
@@ -424,7 +436,12 @@ header {
 .cta-card {
     padding: 4rem 2rem;
     text-align: center;
-    background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(0, 210, 255, 0.1));
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.15), rgba(0, 210, 255, 0.15));
+    border: 1px solid var(--glass-border);
+    border-radius: 30px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: var(--glass-shadow);
 }
 
 .cta-card h2 {
