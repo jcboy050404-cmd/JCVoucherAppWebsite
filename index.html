@@ -30,6 +30,7 @@
             <nav>
                 <ul class="nav-links">
                     <li><a href="#features">Features</a></li>
+                    <li><a href="#changelog">Changelog</a></li>
                     <li><a href="#download" class="btn btn-outline">Download</a></li>
                 </ul>
             </nav>
@@ -44,7 +45,8 @@
                 <p class="hero-subtitle">Experience a revolutionary way to manage your MikroTik routers, generate
                     vouchers, and track your income in real-time.</p>
                 <div class="hero-actions">
-                    <a href="downloads/Voucherapp_v1.0.1.apk" download="Voucherapp_v1.0.1.apk" class="btn btn-primary btn-with-ribbon">
+                    <a href="downloads/Voucherapp_v1.0.1.apk" download="Voucherapp_v1.0.1.apk"
+                        class="btn btn-primary btn-with-ribbon">
                         Download v1.0.1
                         <div class="ribbon-badge">
                             <span class="bell-icon">🔔</span>
@@ -54,7 +56,8 @@
                             </div>
                         </div>
                     </a>
-                    <a href="downloads/Voucherapp_v1.0.0.apk" download="Voucherapp_v1.0.0.apk" class="btn btn-secondary">Download v1.0.0</a>
+                    <a href="downloads/Voucherapp_v1.0.0.apk" download="Voucherapp_v1.0.0.apk"
+                        class="btn btn-secondary">Download v1.0.0</a>
                     <a href="#features" class="btn btn-secondary">Explore Features</a>
                 </div>
             </div>
@@ -114,6 +117,44 @@
                     <p>Securely link your Google account to back up your router configurations and sync across all your
                         devices.</p>
                 </div>
+            </div>
+        </section>
+
+        <section id="changelog" class="changelog container">
+            <h2 class="section-title">Changelog <span class="text-gradient">v1.0.0 - v1.0.1</span></h2>
+            <div class="changelog-content glass-card">
+                <h3>✨ New Features & Enhancements</h3>
+
+                <h4>Template & Voucher Improvements:</h4>
+                <ul>
+                    <li>Added a new logo and color customizer modal to the Premium Split template.</li>
+                    <li>Adjusted the layout for the Premium Split template and removed redundant voucher text.</li>
+                    <li>Dynamically updated the voucher label to display "User Login" whenever a password is provided.
+                    </li>
+                </ul>
+
+                <h4>Build & Automation:</h4>
+                <ul>
+                    <li>Automated the APK export format to dynamically append the version number (e.g.,
+                        Voucherapp_v1.0.1.apk) to the build path.</li>
+                </ul>
+
+                <h3>🎨 UI & UX Improvements</h3>
+                <ul>
+                    <li>Upgraded overall app aesthetics by implementing extensive Glassmorphism UI blur effects.</li>
+                    <li>Redesigned the Force Update Dialog to feature a transparent background with a modern
+                        glassmorphism effect.</li>
+                    <li>Various small UI adjustments and screen optimization updates across the application.</li>
+                </ul>
+
+                <h3>🐛 Bug Fixes</h3>
+                <ul>
+                    <li>Fixed an infinite loop bug related to the Force Update mechanism.</li>
+                    <li>Fixed syntax and layout errors in the Force Update dialog.</li>
+                    <li>Resolved an asynchronous bug in the admin screen that prevented the UI from updating immediately
+                        after approving a user.</li>
+                    <li>Optimized the login shield behavior and fixed cloud revocation synchronization issues.</li>
+                </ul>
             </div>
         </section>
 
