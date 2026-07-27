@@ -671,24 +671,72 @@ footer {
     }
 }
 
-/* Update Badge Animation */
-.new-badge {
-    display: inline-block;
-    background: linear-gradient(135deg, #FF007A, #7928CA);
-    color: white;
-    font-size: 0.75rem;
-    padding: 0.15rem 0.5rem;
-    border-radius: 12px;
-    margin-left: 0.5rem;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-    box-shadow: 0 0 10px rgba(255, 0, 122, 0.5);
-    animation: pulse-badge 2s infinite alternate;
-    vertical-align: middle;
+/* Ribbon Banner styling */
+.btn-with-ribbon {
+    position: relative;
+    /* allow ribbon to stick out */
 }
 
-@keyframes pulse-badge {
-    0% { transform: scale(1); box-shadow: 0 0 10px rgba(255, 0, 122, 0.4); }
-    100% { transform: scale(1.08); box-shadow: 0 0 18px rgba(255, 0, 122, 0.8); }
+.ribbon-badge {
+    position: absolute;
+    top: -24px;
+    left: -18px;
+    background: #4285F4; /* Blue to match image */
+    color: #ffffff;
+    padding: 0.3rem 0.7rem 0.3rem 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transform: rotate(-6deg);
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+    pointer-events: none;
+    border-radius: 2px;
+}
+
+/* The ribbon fold (bottom left) */
+.ribbon-badge::before {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    border-top: 8px solid #1A3E9C; /* Darker blue */
+    border-left: 8px solid transparent;
+}
+
+.bell-icon {
+    font-size: 1.4rem;
+    animation: ring-bell 2.5s infinite;
+    transform-origin: top center;
+    filter: drop-shadow(1px 2px 2px rgba(0,0,0,0.2));
+}
+
+@keyframes ring-bell {
+    0% { transform: rotate(0); }
+    10% { transform: rotate(18deg); }
+    20% { transform: rotate(-12deg); }
+    30% { transform: rotate(18deg); }
+    40% { transform: rotate(-12deg); }
+    50% { transform: rotate(0); }
+    100% { transform: rotate(0); }
+}
+
+.ribbon-text-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1;
+}
+
+.ribbon-new {
+    font-size: 0.55rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    opacity: 0.95;
+}
+
+.ribbon-update {
+    font-size: 0.95rem;
+    font-weight: 900;
+    letter-spacing: 0.5px;
 }
