@@ -490,6 +490,7 @@ header {
     display: flex;
     justify-content: center;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 /* Footer */
@@ -742,12 +743,12 @@ footer {
 }
 
 @media (max-width: 400px) {
-    .hero-actions {
+    .hero-actions, .download-buttons {
         flex-direction: column;
         width: 100%;
     }
 
-    .hero-actions .btn {
+    .hero-actions .btn, .download-buttons .btn {
         width: 100%;
         text-align: center;
     }
