@@ -1,13 +1,15 @@
 :root {
-    --bg-dark: #090B10;
+    --bg-dark: #05050A;
     --text-main: #ffffff;
-    --text-muted: #8E9BAE;
-    --primary-color: #00D2FF;
-    --secondary-color: #34A853;
-    --glass-bg: rgba(255, 255, 255, 0.05);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-    --font-main: 'Poppins', sans-serif;
+    --text-muted: #9CA3AF;
+    --primary-color: #00E1FF;
+    --secondary-color: #A334FA;
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    --glass-highlight: rgba(255, 255, 255, 0.15);
+    --font-main: 'Inter', sans-serif;
+    --font-heading: 'Outfit', sans-serif;
 }
 
 html {
@@ -26,6 +28,10 @@ body {
     font-family: var(--font-main);
     overflow-x: hidden;
     line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6, .logo, .btn, .nav-links a {
+    font-family: var(--font-heading);
 }
 
 .container {
@@ -55,20 +61,29 @@ body {
 }
 
 .blob-1 {
-    top: -10%;
+    top: -20%;
     left: -10%;
     width: 70vw;
     height: 70vw;
-    background: radial-gradient(circle, rgba(62, 39, 115, 0.25) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(163, 52, 250, 0.15) 0%, transparent 70%);
 }
 
 .blob-2 {
-    bottom: -10%;
+    bottom: -20%;
     right: -10%;
     width: 60vw;
     height: 60vw;
-    background: radial-gradient(circle, rgba(0, 115, 204, 0.2) 0%, transparent 70%);
-    animation-delay: -10s;
+    background: radial-gradient(circle, rgba(0, 225, 255, 0.15) 0%, transparent 70%);
+    animation-delay: -7s;
+}
+
+.blob-3 {
+    top: 30%;
+    left: 40%;
+    width: 50vw;
+    height: 50vw;
+    background: radial-gradient(circle, rgba(52, 168, 83, 0.1) 0%, transparent 70%);
+    animation-delay: -14s;
 }
 
 @keyframes float {
@@ -142,7 +157,7 @@ header {
 }
 
 .highlight {
-    background: linear-gradient(to right, #00D2FF, #8A2BE2);
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -177,17 +192,17 @@ header {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #00D2FF 0%, #7B2FBE 100%);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: #ffffff;
     border: none;
-    box-shadow: 0 4px 12px rgba(0, 210, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 225, 255, 0.25);
     font-weight: 600;
 }
 
 .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 210, 255, 0.3);
-    filter: brightness(1.08);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 225, 255, 0.4);
+    filter: brightness(1.1);
 }
 
 .btn-secondary {
@@ -204,18 +219,18 @@ header {
 
 .btn-outline {
     background: transparent;
-    border: 1.5px solid #00D2FF;
-    color: #00D2FF !important;
+    border: 1.5px solid var(--primary-color);
+    color: var(--primary-color) !important;
     box-shadow: none;
     font-weight: 600;
 }
 
 .btn-outline:hover {
-    background: rgba(0, 210, 255, 0.12);
-    border-color: #00D2FF;
-    color: #00D2FF !important;
-    box-shadow: none;
-    transform: translateY(-2px);
+    background: rgba(0, 225, 255, 0.12);
+    border-color: var(--primary-color);
+    color: var(--primary-color) !important;
+    box-shadow: 0 4px 15px rgba(0, 225, 255, 0.15);
+    transform: translateY(-3px);
 }
 
 /* Hero Section */
@@ -252,7 +267,7 @@ header {
 }
 
 .text-gradient {
-    background: linear-gradient(to right, #00D2FF, #8A2BE2);
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -296,6 +311,8 @@ header {
 .glass-card {
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
+    border-top: 1px solid var(--glass-highlight);
+    border-left: 1px solid var(--glass-highlight);
     border-radius: 24px;
     box-shadow: var(--glass-shadow);
     backdrop-filter: blur(16px);
@@ -796,3 +813,16 @@ footer {
     font-weight: 900;
     letter-spacing: 0.5px;
 }
+
+/* Scroll Reveal Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+

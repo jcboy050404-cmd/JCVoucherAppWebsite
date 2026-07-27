@@ -27,13 +27,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (window.innerWidth > 900 && mockupContainer) {
         heroSection.addEventListener('mousemove', (e) => {
-            const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
-            const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+            const xAxis = (window.innerWidth / 2 - e.pageX) / 35;
+            const yAxis = (window.innerHeight / 2 - e.pageY) / 35;
             mockupContainer.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
         });
 
         heroSection.addEventListener('mouseleave', () => {
-            mockupContainer.style.transform = `rotateY(-15deg) rotateX(5deg)`;
+            mockupContainer.style.transform = `rotateY(0deg) rotateX(0deg)`;
         });
     }
+
+    // Scroll Reveal Animation via IntersectionObserver
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealOptions = {
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                return;
+            }
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+        });
+    }, revealOptions);
+
+    revealElements.forEach(el => {
+        revealObserver.observe(el);
+    });
 });
