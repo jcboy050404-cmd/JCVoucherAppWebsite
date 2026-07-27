@@ -138,6 +138,7 @@ header {
     font-size: 1.8rem;
     font-weight: 800;
     letter-spacing: 1px;
+    white-space: nowrap;
 }
 
 .highlight {
@@ -614,7 +615,7 @@ footer {
         gap: 0.8rem;
     }
 
-    .nav-links li:first-child {
+    .nav-links li:not(:last-child) {
         display: none;
     }
 
