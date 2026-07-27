@@ -180,15 +180,25 @@ header {
     color: var(--secondary-color);
 }
 
-/* Buttons */
 .btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     padding: 0.8rem 1.5rem;
     border-radius: 50px;
     font-weight: 600;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+
+.btn svg {
+    transition: transform 0.3s ease;
+}
+
+.btn:hover svg {
+    transform: scale(1.1) rotate(-3deg);
 }
 
 .btn-primary {
@@ -751,37 +761,48 @@ footer {
 
 .ribbon-badge {
     position: absolute;
-    top: -24px;
-    left: -18px;
-    background: #4285F4; /* Blue to match image */
-    color: #ffffff;
-    padding: 0.3rem 0.7rem 0.3rem 0.5rem;
+    top: -20px;
+    left: -14px;
+    background: rgba(5, 5, 10, 0.95);
+    color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 4px;
     transform: rotate(-6deg);
-    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.25);
+    box-shadow: inset 0 0 0 1px rgba(0, 225, 255, 0.3), 0 4px 15px rgba(0, 0, 0, 0.6), 0 0 12px rgba(0, 225, 255, 0.2);
     z-index: 10;
     pointer-events: none;
-    border-radius: 2px;
+    border-radius: 6px;
+    border-bottom-left-radius: 0;
 }
 
 /* The ribbon fold (bottom left) */
 .ribbon-badge::before {
     content: '';
     position: absolute;
-    bottom: -8px;
+    bottom: -6px;
     left: 0;
-    border-top: 8px solid #1A3E9C; /* Darker blue */
-    border-left: 8px solid transparent;
+    border-top: 6px solid #006b7a; /* Dark cyan fold */
+    border-left: 6px solid transparent;
 }
 
 
 .bell-icon {
-    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 14px;
+    height: 14px;
     animation: ring-bell 2.5s infinite;
     transform-origin: top center;
-    filter: drop-shadow(1px 2px 2px rgba(0,0,0,0.2));
+    filter: drop-shadow(0 0 4px rgba(0, 225, 255, 0.6));
+    color: var(--primary-color);
+}
+
+.bell-icon svg {
+    width: 100%;
+    height: 100%;
 }
 
 @keyframes ring-bell {
@@ -802,16 +823,17 @@ footer {
 }
 
 .ribbon-new {
-    font-size: 0.55rem;
+    font-size: 0.45rem;
     font-weight: 800;
     letter-spacing: 1px;
-    opacity: 0.95;
+    color: #ffffff;
 }
 
 .ribbon-update {
-    font-size: 0.95rem;
+    font-size: 0.6rem;
     font-weight: 900;
     letter-spacing: 0.5px;
+    color: var(--primary-color);
 }
 
 /* Scroll Reveal Animations */
