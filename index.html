@@ -177,67 +177,125 @@
         </section>
 
         <section id="changelog" class="changelog container reveal">
-            <h2 class="section-title">Changelog <span class="text-gradient">v1.2.7</span></h2>
-            <div class="changelog-content glass-card" style="margin-bottom: 40px;">
+            <h2 class="section-title">Version <span class="text-gradient">Changelogs</span></h2>
+            
+            <!-- v1.2.7 Card -->
+            <div class="changelog-content glass-card">
+                <div class="changelog-card-header">
+                    <div class="version-badge-group">
+                        <span class="version-tag">v1.2.7</span>
+                        <span class="version-tag-latest">LATEST RELEASE</span>
+                    </div>
+                    <span class="version-date">August 2026</span>
+                </div>
+
                 <h3>✨ New Features & Enhancements</h3>
-                <h4>Dynamic Currency & Localization:</h4>
+                <h4>🌐 Dynamic Currency & Localization:</h4>
                 <ul>
-                    <li>Added <strong>Multilingual Support</strong> and dynamic localization infrastructure.</li>
-                    <li>Introduced <strong>Custom Currency Settings</strong> to support global MikroTik network deployments.</li>
+                    <li>Added <strong>Multilingual Support</strong> (English & Tagalog/Filipino) with dynamic string localization.</li>
+                    <li>Introduced <strong>Custom Currency Settings</strong> (e.g. ₱, $, €, R$) to support global MikroTik network deployments.</li>
                 </ul>
 
-                <h4>IPoE Management & Automated Billing:</h4>
+                <h4>🔌 IPoE Client & Automated Billing System:</h4>
                 <ul>
-                    <li>Added <strong>IPoE User Management</strong> with real-time status monitoring and connection control.</li>
-                    <li>Integrated <strong>IPoE Billing Service</strong> for automated subscription tracking and management.</li>
+                    <li>Added dedicated <strong>IPoE Management Screen</strong> for creating, monitoring, and controlling active IPoE connections.</li>
+                    <li>Integrated <strong>IPoE Billing Service</strong> for automated subscription expiration tracking and connection controls.</li>
                 </ul>
 
-                <h4>MikroTik Connectivity & Network Discovery:</h4>
+                <h4>📡 MikroTik Connectivity & Network Discovery:</h4>
                 <ul>
-                    <li>Enhanced <strong>MNDP Device Discovery</strong> to detect MikroTik devices with exact router names.</li>
-                    <li>Improved RouterOS API parsing for validity scripts, socket lifecycle handling, and direct remote file access.</li>
+                    <li>Implemented <strong>MNDP Device Discovery</strong> over UDP to automatically locate MikroTik routers on local networks.</li>
+                    <li>Enhanced RouterOS API command parser, validity script scheduling, and graceful socket shutdown lifecycle.</li>
+                    <li>Added direct <strong>MikroTik Remote File Explorer</strong> for managing router backup files on-device.</li>
                 </ul>
 
-                <h3>🐛 Bug Fixes & Stability</h3>
+                <h3>🐛 Bug Fixes & Improvements</h3>
                 <ul>
-                    <li>Fixed socket closure memory leaks and optimized network reconnection handling.</li>
+                    <li>Optimized socket closure memory leaks and fixed network reconnection routines.</li>
                     <li>Resolved 12-hour / 24-hour timestamp formatting across voucher models and log screens.</li>
                 </ul>
             </div>
 
-            <h2 class="section-title">Older Changelogs <span class="text-gradient">v1.0.0 - v1.1.6</span></h2>
+            <!-- v1.1.6 Card -->
             <div class="changelog-content glass-card">
+                <div class="changelog-card-header">
+                    <div class="version-badge-group">
+                        <span class="version-tag">v1.1.6</span>
+                    </div>
+                    <span class="version-date">August 2026</span>
+                </div>
+
                 <h3>✨ New Features & Enhancements</h3>
-
-                <h4>Template & Voucher Improvements:</h4>
+                <h4>⏱️ Custom Timestamp Formatting:</h4>
                 <ul>
-                    <li>Added a new logo and color customizer modal to the Premium Split template.</li>
-                    <li>Adjusted the layout for the Premium Split template and removed redundant voucher text.</li>
-                    <li>Dynamically updated the voucher label to display "User Login" whenever a password is provided.
-                    </li>
+                    <li>Added support for <strong>12-Hour AM/PM Format</strong> for expiration dates and system log timestamps.</li>
                 </ul>
 
-                <h4>Build & Automation:</h4>
+                <h4>👤 Profile & Authentication Upgrades:</h4>
                 <ul>
-                    <li>Automated the APK export format to dynamically append the version number (e.g.,
-                        Voucherapp_v1.0.1.apk) to the build path.</li>
+                    <li>Updated Google Sign-In authentication flow with manual credential login fallback.</li>
+                    <li>Added custom floating emoji overlays and mode-specific gradient border rings on user profile avatars.</li>
+                    <li>Upgraded PRO Monthly Active status banner with a sleek Gold theme visual redesign.</li>
                 </ul>
 
-                <h3>🎨 UI & UX Improvements</h3>
+                <h4>🛠️ RouterOS Script Engine:</h4>
                 <ul>
-                    <li>Upgraded overall app aesthetics by implementing extensive Glassmorphism UI blur effects.</li>
-                    <li>Redesigned the Force Update Dialog to feature a transparent background with a modern
-                        glassmorphism effect.</li>
-                    <li>Various small UI adjustments and screen optimization updates across the application.</li>
+                    <li>Upgraded RouterOS validity script generator to replace legacy operators (<code>&amp;&amp;</code> &rarr; <code>and</code>) for full RouterOS v6 and v7 compatibility.</li>
+                </ul>
+            </div>
+
+            <!-- v1.1.3 - v1.1.2 Card -->
+            <div class="changelog-content glass-card">
+                <div class="changelog-card-header">
+                    <div class="version-badge-group">
+                        <span class="version-tag">v1.1.2 – v1.1.3</span>
+                    </div>
+                    <span class="version-date">July 2026</span>
+                </div>
+
+                <h3>✨ New Features & Enhancements</h3>
+                <h4>🔑 License Key & Reseller System:</h4>
+                <ul>
+                    <li>Added a <strong>License Key Redemption</strong> system for instant PRO activation.</li>
+                    <li>Introduced a <strong>Super Admin Reseller Panel</strong> to generate, track, and copy key batches.</li>
+                    <li>Added a <strong>Remote Kill Switch</strong> for cloud-managed PRO subscription control.</li>
                 </ul>
 
-                <h3>🐛 Bug Fixes</h3>
+                <h4>📄 PDF & Ticket Layout Customization:</h4>
                 <ul>
-                    <li>Fixed an infinite loop bug related to the Force Update mechanism.</li>
-                    <li>Fixed syntax and layout errors in the Force Update dialog.</li>
-                    <li>Resolved an asynchronous bug in the admin screen that prevented the UI from updating immediately
-                        after approving a user.</li>
-                    <li>Optimized the login shield behavior and fixed cloud revocation synchronization issues.</li>
+                    <li>Added <strong>targetTicketsPerPage</strong> and <strong>hotspotName</strong> support across all PDF print templates.</li>
+                    <li>Updated standard template and UI for customizing tickets per page during printing.</li>
+                </ul>
+
+                <h3>🐛 Bug Fixes & Security</h3>
+                <ul>
+                    <li>Closed device-limit race condition and prevented offline bypass vulnerabilities.</li>
+                    <li>Fixed Free Trial reset bug: Automatically resets trial used state when setting PRO users to free trial.</li>
+                    <li>Fixed duplicate <code>cellH</code> variable declaration in PDF engine rendering.</li>
+                </ul>
+            </div>
+
+            <!-- v1.0.0 - v1.0.1 Card -->
+            <div class="changelog-content glass-card">
+                <div class="changelog-card-header">
+                    <div class="version-badge-group">
+                        <span class="version-tag">v1.0.0 – v1.0.1</span>
+                    </div>
+                    <span class="version-date">June 2026</span>
+                </div>
+
+                <h3>✨ Initial Release Highlights</h3>
+                <h4>🎟️ Core Hotspot Management:</h4>
+                <ul>
+                    <li>Batch voucher generator supporting custom time, data, and bandwidth limit profiles.</li>
+                    <li>Real-time MikroTik router monitoring dashboard (CPU, RAM, uptime, and active hotspot users).</li>
+                    <li>Sales and income tracking analytics module.</li>
+                </ul>
+
+                <h4>🎨 Glassmorphism Design System:</h4>
+                <ul>
+                    <li>Built with modern Glassmorphism visual elements, acrylic blur backdrops, and responsive layouts.</li>
+                    <li>Redesigned Force Update Dialog with acrylic glass background effects.</li>
                 </ul>
             </div>
         </section>
