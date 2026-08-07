@@ -55,14 +55,14 @@
                 <p class="hero-subtitle">Experience a revolutionary way to manage your MikroTik routers, generate
                     vouchers, and track your income in real-time.</p>
                 <div class="hero-actions">
-                    <a href="https://drive.google.com/file/d/1_dOePayQBMIS1RNXf7ECan0ohHqGnwk5/view" target="_blank"
+                    <a href="downloads/Voucherapp_v1.2.9.apk" download="Voucherapp_v1.2.9.apk"
                         class="btn btn-primary btn-with-ribbon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                             <polyline points="7 10 12 15 17 10"></polyline>
                             <line x1="12" y1="15" x2="12" y2="3"></line>
-                        </svg> Download APK v1.2.8
+                        </svg> Download APK v1.2.9
                         <div class="ribbon-badge">
                             <span class="bell-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -76,14 +76,14 @@
                             </div>
                         </div>
                     </a>
-                    <a href="downloads/VoucherApp_v1.2.8_windows.zip" download="VoucherApp_v1.2.8_windows.zip"
+                    <a href="downloads/Voucherapp_v1.2.9.zip" download="VoucherApp_v1.2.9.zip"
                         class="btn btn-primary btn-with-ribbon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                             <line x1="8" y1="21" x2="16" y2="21"></line>
                             <line x1="12" y1="17" x2="12" y2="21"></line>
-                        </svg> Download PC App v1.2.8
+                        </svg> Download PC App v1.2.9
                         <div class="ribbon-badge">
                             <span class="bell-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -178,7 +178,7 @@
 
         <section id="changelog" class="changelog container reveal">
             <h2 class="section-title">Version <span class="text-gradient">Changelogs</span></h2>
-            
+
             <!-- v1.2.10 Card -->
             <div class="changelog-content glass-card">
                 <div class="changelog-card-header">
@@ -208,7 +208,8 @@
                 <h3>✨ In-App Update System</h3>
                 <h4>🚀 New Features & Enhancements:</h4>
                 <ul>
-                    <li>Introduced <strong>Force Update Service</strong> to ensure users always have the latest app version.</li>
+                    <li>Introduced <strong>Force Update Service</strong> to ensure users always have the latest app
+                        version.</li>
                     <li>Performance improvements and minor bug fixes for better stability.</li>
                 </ul>
             </div>
@@ -225,10 +226,14 @@
                 <h3>⚡ Flash-Safe Global Polling Architecture</h3>
                 <h4>🚀 Optimized Hotspot Expiration System:</h4>
                 <ul>
-                    <li>Replaced individual per-user background schedulers with a single <strong>Global Polling Scheduler</strong>, eliminating router flash memory degradation.</li>
-                    <li>Integrated case-insensitive month parsing (`aug`/`Aug`) with modulo arithmetic for bulletproof RouterOS v6/v7 date calculations.</li>
-                    <li>Fixed same-day time-only (`HH:MM:SS`) timestamp formatting to guarantee short-duration vouchers (30m, 1h, 3h) expire accurately.</li>
-                    <li>Added idempotent comment state protection to ensure users are processed cleanly without redundant operations.</li>
+                    <li>Replaced individual per-user background schedulers with a single <strong>Global Polling
+                            Scheduler</strong>, eliminating router flash memory degradation.</li>
+                    <li>Integrated case-insensitive month parsing (`aug`/`Aug`) with modulo arithmetic for bulletproof
+                        RouterOS v6/v7 date calculations.</li>
+                    <li>Fixed same-day time-only (`HH:MM:SS`) timestamp formatting to guarantee short-duration vouchers
+                        (30m, 1h, 3h) expire accurately.</li>
+                    <li>Added idempotent comment state protection to ensure users are processed cleanly without
+                        redundant operations.</li>
                 </ul>
             </div>
 
@@ -244,21 +249,28 @@
                 <h3>✨ New Features & Enhancements</h3>
                 <h4>🌐 Dynamic Currency & Localization:</h4>
                 <ul>
-                    <li>Added <strong>Multilingual Support</strong> (English & Tagalog/Filipino) with dynamic string localization.</li>
-                    <li>Introduced <strong>Custom Currency Settings</strong> (e.g. ₱, $, €, R$) to support global MikroTik network deployments.</li>
+                    <li>Added <strong>Multilingual Support</strong> (English & Tagalog/Filipino) with dynamic string
+                        localization.</li>
+                    <li>Introduced <strong>Custom Currency Settings</strong> (e.g. ₱, $, €, R$) to support global
+                        MikroTik network deployments.</li>
                 </ul>
 
                 <h4>🔌 IPoE Client & Automated Billing System:</h4>
                 <ul>
-                    <li>Added dedicated <strong>IPoE Management Screen</strong> for creating, monitoring, and controlling active IPoE connections.</li>
-                    <li>Integrated <strong>IPoE Billing Service</strong> for automated subscription expiration tracking and connection controls.</li>
+                    <li>Added dedicated <strong>IPoE Management Screen</strong> for creating, monitoring, and
+                        controlling active IPoE connections.</li>
+                    <li>Integrated <strong>IPoE Billing Service</strong> for automated subscription expiration tracking
+                        and connection controls.</li>
                 </ul>
 
                 <h4>📡 MikroTik Connectivity & Network Discovery:</h4>
                 <ul>
-                    <li>Implemented <strong>MNDP Device Discovery</strong> over UDP to automatically locate MikroTik routers on local networks.</li>
-                    <li>Enhanced RouterOS API command parser, validity script scheduling, and graceful socket shutdown lifecycle.</li>
-                    <li>Added direct <strong>MikroTik Remote File Explorer</strong> for managing router backup files on-device.</li>
+                    <li>Implemented <strong>MNDP Device Discovery</strong> over UDP to automatically locate MikroTik
+                        routers on local networks.</li>
+                    <li>Enhanced RouterOS API command parser, validity script scheduling, and graceful socket shutdown
+                        lifecycle.</li>
+                    <li>Added direct <strong>MikroTik Remote File Explorer</strong> for managing router backup files
+                        on-device.</li>
                 </ul>
 
                 <h3>🐛 Bug Fixes & Improvements</h3>
@@ -280,19 +292,22 @@
                 <h3>✨ New Features & Enhancements</h3>
                 <h4>⏱️ Custom Timestamp Formatting:</h4>
                 <ul>
-                    <li>Added support for <strong>12-Hour AM/PM Format</strong> for expiration dates and system log timestamps.</li>
+                    <li>Added support for <strong>12-Hour AM/PM Format</strong> for expiration dates and system log
+                        timestamps.</li>
                 </ul>
 
                 <h4>👤 Profile & Authentication Upgrades:</h4>
                 <ul>
                     <li>Updated Google Sign-In authentication flow with manual credential login fallback.</li>
-                    <li>Added custom floating emoji overlays and mode-specific gradient border rings on user profile avatars.</li>
+                    <li>Added custom floating emoji overlays and mode-specific gradient border rings on user profile
+                        avatars.</li>
                     <li>Upgraded PRO Monthly Active status banner with a sleek Gold theme visual redesign.</li>
                 </ul>
 
                 <h4>🛠️ RouterOS Script Engine:</h4>
                 <ul>
-                    <li>Upgraded RouterOS validity script generator to replace legacy operators (<code>&amp;&amp;</code> &rarr; <code>and</code>) for full RouterOS v6 and v7 compatibility.</li>
+                    <li>Upgraded RouterOS validity script generator to replace legacy operators (<code>&amp;&amp;</code>
+                        &rarr; <code>and</code>) for full RouterOS v6 and v7 compatibility.</li>
                 </ul>
             </div>
 
@@ -309,20 +324,23 @@
                 <h4>🔑 License Key & Reseller System:</h4>
                 <ul>
                     <li>Added a <strong>License Key Redemption</strong> system for instant PRO activation.</li>
-                    <li>Introduced a <strong>Super Admin Reseller Panel</strong> to generate, track, and copy key batches.</li>
+                    <li>Introduced a <strong>Super Admin Reseller Panel</strong> to generate, track, and copy key
+                        batches.</li>
                     <li>Added a <strong>Remote Kill Switch</strong> for cloud-managed PRO subscription control.</li>
                 </ul>
 
                 <h4>📄 PDF & Ticket Layout Customization:</h4>
                 <ul>
-                    <li>Added <strong>targetTicketsPerPage</strong> and <strong>hotspotName</strong> support across all PDF print templates.</li>
+                    <li>Added <strong>targetTicketsPerPage</strong> and <strong>hotspotName</strong> support across all
+                        PDF print templates.</li>
                     <li>Updated standard template and UI for customizing tickets per page during printing.</li>
                 </ul>
 
                 <h3>🐛 Bug Fixes & Security</h3>
                 <ul>
                     <li>Closed device-limit race condition and prevented offline bypass vulnerabilities.</li>
-                    <li>Fixed Free Trial reset bug: Automatically resets trial used state when setting PRO users to free trial.</li>
+                    <li>Fixed Free Trial reset bug: Automatically resets trial used state when setting PRO users to free
+                        trial.</li>
                     <li>Fixed duplicate <code>cellH</code> variable declaration in PDF engine rendering.</li>
                 </ul>
             </div>
@@ -340,13 +358,15 @@
                 <h4>🎟️ Core Hotspot Management:</h4>
                 <ul>
                     <li>Batch voucher generator supporting custom time, data, and bandwidth limit profiles.</li>
-                    <li>Real-time MikroTik router monitoring dashboard (CPU, RAM, uptime, and active hotspot users).</li>
+                    <li>Real-time MikroTik router monitoring dashboard (CPU, RAM, uptime, and active hotspot users).
+                    </li>
                     <li>Sales and income tracking analytics module.</li>
                 </ul>
 
                 <h4>🎨 Glassmorphism Design System:</h4>
                 <ul>
-                    <li>Built with modern Glassmorphism visual elements, acrylic blur backdrops, and responsive layouts.</li>
+                    <li>Built with modern Glassmorphism visual elements, acrylic blur backdrops, and responsive layouts.
+                    </li>
                     <li>Redesigned Force Update Dialog with acrylic glass background effects.</li>
                 </ul>
             </div>
@@ -360,14 +380,14 @@
                 <h2>Ready to Start Managing Your MikroTik?</h2>
                 <p>Join thousands of network admins who generate hotspot vouchers on the go with Voucher App.</p>
                 <div class="download-buttons">
-                    <a href="https://drive.google.com/file/d/1_dOePayQBMIS1RNXf7ECan0ohHqGnwk5/view" target="_blank"
+                    <a href="downloads/Voucherapp_v1.2.9.apk" download="Voucherapp_v1.2.9.apk"
                         class="btn btn-primary download-btn btn-with-ribbon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                             <polyline points="7 10 12 15 17 10"></polyline>
                             <line x1="12" y1="15" x2="12" y2="3"></line>
-                        </svg> Download APK v1.2.8
+                        </svg> Download APK v1.2.9
                         <div class="ribbon-badge">
                             <span class="bell-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -381,14 +401,14 @@
                             </div>
                         </div>
                     </a>
-                    <a href="downloads/VoucherApp_v1.2.8_windows.zip" download="VoucherApp_v1.2.8_windows.zip"
+                    <a href="downloads/Voucherapp_v1.2.9.zip" download="VoucherApp_v1.2.9.zip"
                         class="btn btn-primary download-btn btn-with-ribbon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                             <line x1="8" y1="21" x2="16" y2="21"></line>
                             <line x1="12" y1="17" x2="12" y2="21"></line>
-                        </svg> Download PC App v1.2.8
+                        </svg> Download PC App v1.2.9
                         <div class="ribbon-badge">
                             <span class="bell-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
