@@ -394,6 +394,116 @@ header {
     display: block;
 }
 
+/* About Section */
+.about {
+    padding: 6rem 2rem 2rem;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem;
+    text-align: left;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+}
+
+.about-content p {
+    margin-bottom: 1.5rem;
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* How it Works Section */
+.how-it-works {
+    padding: 2rem 2rem 6rem;
+    text-align: center;
+}
+
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.step-card {
+    padding: 2.5rem;
+    position: relative;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-10px);
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-family: var(--font-heading);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem auto;
+    box-shadow: 0 4px 15px rgba(163, 52, 250, 0.4);
+}
+
+.step-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.step-card p {
+    color: var(--text-muted);
+}
+
+/* Use Cases Section */
+.use-cases {
+    padding: 2rem 2rem 6rem;
+    text-align: center;
+}
+
+.use-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.use-case-card {
+    padding: 2.5rem;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.use-case-card:hover {
+    transform: translateY(-5px);
+}
+
+.use-case-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.use-case-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+.use-case-card p {
+    color: var(--text-muted);
+}
+
 /* Features */
 .features {
     padding: 6rem 2rem;
@@ -892,6 +1002,43 @@ footer {
     color: var(--primary-color);
 }
 
+/* FAQ Section */
+.faq {
+    padding: 2rem 2rem 6rem;
+    text-align: center;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 3rem auto 0 auto;
+}
+
+.faq-card {
+    padding: 2rem;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.faq-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 225, 255, 0.15);
+}
+
+.faq-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-main);
+}
+
+.faq-card p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
 /* Scroll Reveal Animations */
 .reveal {
     opacity: 0;
@@ -904,3 +1051,41 @@ footer {
     transform: translateY(0);
 }
 
+/* Staggered card animations inside active reveal sections */
+.reveal.active .step-card,
+.reveal.active .feature-card,
+.reveal.active .use-case-card,
+.reveal.active .faq-card,
+.reveal.active .changelog-content {
+    animation: fadeUpStagger 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUpStagger {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Delays for children to create the cascade effect */
+.reveal.active .step-card:nth-child(1), .reveal.active .feature-card:nth-child(1), .reveal.active .use-case-card:nth-child(1), .reveal.active .faq-card:nth-child(1) { animation-delay: 0.1s; }
+.reveal.active .step-card:nth-child(2), .reveal.active .feature-card:nth-child(2), .reveal.active .use-case-card:nth-child(2), .reveal.active .faq-card:nth-child(2) { animation-delay: 0.2s; }
+.reveal.active .step-card:nth-child(3), .reveal.active .feature-card:nth-child(3), .reveal.active .use-case-card:nth-child(3), .reveal.active .faq-card:nth-child(3) { animation-delay: 0.3s; }
+.reveal.active .feature-card:nth-child(4) { animation-delay: 0.4s; }
+.reveal.active .feature-card:nth-child(5) { animation-delay: 0.5s; }
+.reveal.active .feature-card:nth-child(6) { animation-delay: 0.6s; }
+.reveal.active .feature-card:nth-child(7) { animation-delay: 0.7s; }
+.reveal.active .feature-card:nth-child(8) { animation-delay: 0.8s; }
+.reveal.active .feature-card:nth-child(9) { animation-delay: 0.9s; }
+
+/* Apply simple stagger for changelog items */
+.reveal.active .changelog-content:nth-of-type(1) { animation-delay: 0.1s; }
+.reveal.active .changelog-content:nth-of-type(2) { animation-delay: 0.2s; }
+.reveal.active .changelog-content:nth-of-type(3) { animation-delay: 0.3s; }
+.reveal.active .changelog-content:nth-of-type(4) { animation-delay: 0.4s; }
+.reveal.active .changelog-content:nth-of-type(5) { animation-delay: 0.5s; }
